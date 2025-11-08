@@ -1,11 +1,11 @@
-package com.mousebuttonremapper;
+package com.plugintemplate;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
 @ConfigGroup("mousebuttonremapper")
-public interface MouseButtonRemapperConfig extends Config
+public interface PluginTemplateConfig extends Config
 {
     @ConfigItem(
             keyName = "enabled",

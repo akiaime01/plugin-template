@@ -1,4 +1,4 @@
-package com.mousebuttonremapper;
+package com.plugintemplate;
 
 import com.google.inject.Provides;
 import net.runelite.api.Client;
@@ -14,11 +14,11 @@ import java.awt.AWTException;
 import java.awt.event.KeyEvent;
 
 @PluginDescriptor(
-        name = "Mouse Button Remapper",
-        description = "Remap configurable keys (including OS-mapped Mouse 4/5) to keyboard presses",
+        name = "Plugin Template",
+        description = "Plugin Template",
         tags = {"keyboard", "mouse", "remap", "input"}
 )
-public class MouseButtonRemapperPlugin extends Plugin implements KeyListener
+public class PluginTemplate extends Plugin implements KeyListener
 {
     @Inject
     private Client client;
@@ -27,14 +27,14 @@ public class MouseButtonRemapperPlugin extends Plugin implements KeyListener
     private KeyManager keyManager;
 
     @Inject
-    private MouseButtonRemapperConfig config;
+    private PluginTemplateConfig config;
 
     private Robot robot;
 
     @Provides
-    MouseButtonRemapperConfig provideConfig(ConfigManager configManager)
+    PluginTemplateConfig provideConfig(ConfigManager configManager)
     {
-        return configManager.getConfig(MouseButtonRemapperConfig.class);
+        return configManager.getConfig(PluginTemplateConfig.class);
     }
 
     @Override
